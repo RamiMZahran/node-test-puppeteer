@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+    <div style="width: 80%">
+        <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+    <script>
+        new Chart(document.getElementById("canvas"),
+            {
+                "type": "line",
+                "data":
+                {
+                    "datasets": [{
+                        "label": "series A",
+                        "data": [{ x: 7, y: 0 },
+                        { x: 5, y: 1 },
+                        { x: 3, y: 2 },
+                        { x: -1, y: 3 },
+                        { x: -2, y: 4 },
+                        { x: 5, y: 5 },
+                        { x: 4, y: 6 }],
+                        "fill": false,
+                        "borderColor": "#96928e",
+                        "pointBackgroundColor": "red",
+                        "pointBorderColor": "red",
+                        "borderWidth": 1.125,
+                        // "lineTension": 0.1
+                    }]
+                },
+                "options": {
+                    "animation": null,
+                    "scales": {
+                        "xAxes": [
+                            {
+                                "type": "linear",
+                                "position": "bottom",
+                                "ticks": {
+                                    "max": 8,
+                                    "min": -8,
+                                    "stepSize": 1,
+                                    "autoSkip": true
+                                }
+                            }
+                        ],
+                        "yAxes": [
+                            {
+                                // type: "linear",
+                                "position": "left",
+                                "ticks": {
+                                    "max": [
+                                        "A",
+                                        "B",
+                                        "C",
+                                        "D",
+                                        "E",
+                                        "F",
+                                        "G",
+                                        "H",
+                                        "I",
+                                        "J",
+                                        "K",
+                                        "L",
+                                        "M",
+                                        "N",
+                                        "O",
+                                        "P",
+                                        "Q",
+                                        "R",
+                                        "S",
+                                        "T",
+                                        "U",
+                                        "V",
+                                        "W",
+                                        "X",
+                                        "Y",
+                                        "Z"
+                                    ].length + 1,
+                                    "min": 1,
+                                    "stepSize": 1,
+                                    callback: function (label, index, labels) {
+                                        const arr = [
+                                            "A",
+                                            "B",
+                                            "C",
+                                            "D",
+                                            "E",
+                                            "F",
+                                            "G",
+                                            "H",
+                                            "I",
+                                            "J",
+                                            "K",
+                                            "L",
+                                            "M",
+                                            "N",
+                                            "O",
+                                            "P",
+                                            "Q",
+                                            "R",
+                                            "S",
+                                            "T",
+                                            "U",
+                                            "V",
+                                            "W",
+                                            "X",
+                                            "Y",
+                                            "Z"
+                                        ];
+                                        return arr[index - 1];
+                                    }
+                                }
+                            }
+                        ]
+
+                    }
+                }
+            });    
+    </script>
+
+</body>
+
+</html>
